@@ -1,0 +1,15 @@
+{
+    "name": "My App",
+    "description": "My Summary",
+    "type": "project",
+    "license": "AGPL",
+    "authors": [
+        {
+            "name": "My Name"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    }
+}
