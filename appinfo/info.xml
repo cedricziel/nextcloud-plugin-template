@@ -12,7 +12,10 @@
     <category>tools</category>
     <bugs>https://github.com/my-project/my-repo/issues</bugs>
     <dependencies>
-        <nextcloud min-version="15" max-version="15"/>
+        <database min-version="9.4">pgsql</database>
+        <database>sqlite</database>
+        <database min-version="8.0">mysql</database>
+        <nextcloud min-version="24" max-version="24"/>
     </dependencies>
     <navigations>
         <navigation>
