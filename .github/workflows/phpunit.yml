@@ -1,3 +1,4 @@
+# https://github.com/nextcloud/deck/blob/master/.github/workflows/phpunit.yml
 name: PHPUnit
 
 on:
@@ -8,7 +9,7 @@ on:
       - stable*
 
 env:
-  APP_NAME: my-app
+  APP_NAME: my_app
 
 jobs:
   integration:
