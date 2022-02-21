@@ -2,6 +2,7 @@
 
 namespace OCA\MyApp\Tests\Integration\Controller;
 
+use OCP\App\IAppManager;
 use OCP\AppFramework\App;
 use Test\TestCase;
 
@@ -17,13 +18,13 @@ class AppTest extends TestCase {
 
     public function setUp(): void {
         parent::setUp();
-        $app = new App('myapp');
+
+        $app = new App('my_app');
         $this->container = $app->getContainer();
     }
 
     public function testAppInstalled() {
-        $appManager = $this->container->query('OCP\App\IAppManager');
-        $this->assertTrue($appManager->isInstalled('myapp'));
+        $appManager = $this->container->get(IAppManager::class);
+        $this->assertTrue($appManager->isInstalled('my_app'));
     }
-
 }
