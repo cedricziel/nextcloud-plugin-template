@@ -2,18 +2,18 @@
 
 namespace OCA\MyApp\Tests\Unit\Controller;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 use OCP\AppFramework\Http\TemplateResponse;
 
 use OCA\MyApp\Controller\PageController;
 
 
-class PageControllerTest extends PHPUnit_Framework_TestCase {
+class PageControllerTest extends TestCase {
 	private $controller;
 	private $userId = 'john';
 
-	public function setUp() {
+	public function setUp(): void {
 		$request = $this->getMockBuilder('OCP\IRequest')->getMock();
 
 		$this->controller = new PageController(
@@ -27,5 +27,4 @@ class PageControllerTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals('index', $result->getTemplateName());
 		$this->assertTrue($result instanceof TemplateResponse);
 	}
-
 }
